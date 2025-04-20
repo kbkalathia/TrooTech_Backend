@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "create:migration": "npx sequelize-cli migration:generate --name",
     "db:migrate": "npx sequelize-cli db:migrate",
-    "build": "esbuild index.ts --bundle --outfile=dist/index.js --platform=node --target=node14",
+    "build": "rm -rf dist && esbuild index.ts --bundle --outfile=dist/index.js --platform=node --target=node14",
     "start": "node dist/index"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
+    "esbuild": "^0.25.2",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.14.1",
@@ -36,7 +37,6 @@
     "@types/node": "^22.7.5",
     "@types/pg": "^8.11.10",
     "concurrently": "^9.0.1",
-    "esbuild": "^0.25.2",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
