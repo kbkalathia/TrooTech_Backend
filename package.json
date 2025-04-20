@@ -9,6 +9,7 @@
     "create:migration": "npx sequelize-cli migration:generate --name",
     "db:migrate": "npx sequelize-cli db:migrate",
     "build": "rm -rf dist && esbuild index.ts --bundle --outfile=dist/index.js --platform=node --target=node14",
+    "prestart": "npm run db:migrate",
     "start": "node dist/index"
   },
   "keywords": [],
