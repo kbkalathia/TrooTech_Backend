@@ -1,0 +1,29 @@
+name: Deploy backend to EC2
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        run: |
+          echo "${{ secrets.EC2_KEY }}" | base64 -d > secret_key.pem
+          chmod 400 secret_key.pem
+
+      - name: Deploy to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no -i secret_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
+            cd ~/i_source_backend
+            git pull origin master
+            npm install
+            npm run build
+            pm2 restart backend || pm2 start npm --name "backend" -- start
+          EOF

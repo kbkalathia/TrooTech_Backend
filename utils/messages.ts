@@ -1,0 +1,43 @@
+export const Messages = {
+  Users: {
+    REGISTRATION_SUCCESS: "Registration Success",
+    LOGIN_SUCCESS: "Login Success",
+    EMAIL_EXIST: "Email Already Exist",
+  },
+  Products: {
+    INVALID_ID: "Invalid Product ID",
+    NOT_FOUND: "Product not found",
+    LIST: "Products list",
+    DETAILS: "Product details",
+    ADD_SUCCESS: "Product added successfully",
+    REMOVE_SUCCESS: "Product removed successfully",
+    UPDATE_SUCCESS: "Product updated successfully",
+  },
+  Carts: {
+    NOT_FOUND: "Cart Not Found",
+    CREATE_SUCCESS: "User Cart Created",
+    UPDATE_SUCCESS: "User Cart Update",
+    DELETE_SUCCESS: "User Cart Deleted",
+    CART_DETAILS: "User Cart Details",
+    ADD_PRODUCT_SUCCESS: "Added Product to Cart",
+    REMOVE_PRODUCT_SUCCESS: "Removed Product from Cart",
+  },
+  Blogs: {
+    INVALID_ID: "Invalid blog ID",
+    NOT_FOUND: "Blog not found",
+    LIST: "Blogs list",
+    DETAILS: "Blog details",
+    CREATE_SUCCESS: "Blog added successfully",
+    UPDATE_SUCCESS: "Blog updated successfully",
+    DELETE_SUCCESS: "Blog deleted successfully",
+  },
+  Comments: {
+    INVALID_ID: "Invalid comment ID",
+    NOT_FOUND: "Comment not found",
+    LIST: "Comments list",
+    DETAILS: "Comment details",
+    CREATE_SUCCESS: "Comment added successfully",
+    UPDATE_SUCCESS: "Comment updated successfully",
+    DELETE_SUCCESS: "Comment deleted successfully",
+  },
+};
