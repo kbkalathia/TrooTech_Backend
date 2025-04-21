@@ -17,7 +17,7 @@ const CartItemsModel = sequelize.define(
     },
   },
   {
-    timestamps: false,
+    timestamps: true,
   }
 );
 

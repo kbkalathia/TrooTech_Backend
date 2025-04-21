@@ -22,7 +22,7 @@ class CartServiceClass {
           as: "productDetails",
         },
       ],
-      //   order: [["createdAt", "DESC"]],
+        order: [["createdAt", "DESC"]],
     });
 
     return {
